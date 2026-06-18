@@ -1,0 +1,32 @@
+{
+    // ========================================
+    // 工作区级 VSCode 设置
+    // ========================================
+
+    // --- 编辑器 ---
+    "editor.wordWrap": "on",
+    "editor.renderWhitespace": "boundary",
+    "editor.bracketPairColorization.enabled": true,
+    "editor.guides.bracketPairs": "active",
+    "files.autoSave": "onFocusChange",
+
+    // --- Git ---
+    "git.enableSmartCommit": true,
+    "git.confirmSync": false,
+    "git.autofetch": true,
+
+    // --- LaTeX Workshop (全局默认) ---
+    "latex-workshop.latex.autoBuild.run": "onSave",
+    "latex-workshop.latex.recipe.default": "lastUsed",
+    "latex-workshop.view.pdf.viewer": "tab",
+    "latex-workshop.message.warning.show": false,
+    "latex-workshop.message.error.show": true,
+
+    // --- 拼写检查 ---
+    "cSpell.language": "en",
+    "spellright.language": ["en"],
+    "spellright.documentTypes": ["latex", "markdown", "plaintext"],
+
+    // --- Comment Translate ---
+    "commentTranslate.multiLineMerge": true
+}

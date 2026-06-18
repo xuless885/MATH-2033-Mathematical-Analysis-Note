@@ -217,7 +217,7 @@ Moreover, before use this notes, you may hold some basic knowledge of \textbf{MA
 %	PART
 %----------------------------------------------------------------------------------------
 
-\part{Part I: Mathematical Analysis }
+\part{Part I: Basic Analysis }
 
 %----------------------------------------------------------------------------------------
 %	SECTIONING EXAMPLES CHAPTER
@@ -5463,7 +5463,7 @@ Note that we have :
 
     \begin{definition}[Riemann-Stieltje Condition]
     
-        We said $f$ satisfied the Riemann-Stieltje Condition respect to $\alpha$ over $[a,b]$ iff 
+        We said $f$ satisfied the \textbf{Riemann-Stieltje Condition} respect to $\alpha$ over $[a,b]$ iff 
         for all  $\epsilon > 0$, 
         there exist $P_{\epsilon} \in \mathcal{P}[a,b]$ s.t $\forall P^{*} \supset P_{\epsilon}$ we have
         $$
@@ -5564,8 +5564,58 @@ Note that we have :
     \end{lemma}
 
     \begin{proof}
-        
+        Let $A = \underline{\int}_{a}^{b}f(x) \diffd \alpha = \overline{\int}_{a}^{b}f(x) \diffd \alpha$ we prove 
+        for all $\epsilon >0$, exists $P_\epsilon$ s.t. $\forall P_\epsilon \subseteq P$ we have 
+        $$
+                \left| S(f,P,\alpha) -A \right| < \epsilon \\
+            \iff  A - \epsilon < S(f,P,\alpha)  < A + \epsilon
+        $$
+        first for any $P$ we have $ L(f,P,\alpha) \leq  S(f,P,\alpha) \leq  U(f,P,\alpha)$, 
+        for all $\epsilon >0$ we can take $P_1$ s.t.
+        $$
+            A = \overline{\int}_{a}^{b}f(x) \diffd \alpha < U(f,P,\alpha) 
+            < \overline{\int}_{a}^{b}f(x) \diffd \alpha + \epsilon = A + \epsilon
+        $$
+        moreover, we can take $P_2$ s.t.
+        $$
+            A - \epsilon = \underline{\int}_{a}^{b}f(x) \diffd \alpha - \epsilon < L(f,P,\alpha) 
+            < \underline{\int}_{a}^{b}f(x) \diffd \alpha = A 
+        $$
+        rewrite $P = P_1 \cup P_2$, there implies 
+        $$
+            A - \epsilon < L(f,P,\alpha) \leq  S(f,P,\alpha) \leq  U(f,P,\alpha) < A + \epsilon
+        $$
+        $\iff \left| S(f,P,\alpha) -A \right| < \epsilon$, so $f\in \mathcal{R}(\alpha)[a,b]$.
+
     \end{proof}
+
+    \newpage
+
+    Now, we have the Equivalent statements about the integralbility:
+
+    \begin{corollary} We have
+        \begin{enumerate}
+            \item[] $f \in \mathcal{R}(\alpha)[a,b]$ \hfill (1)
+            \item[$\iff$] $f$ satisfied the Riemann-Stieltje Condition respect to $\alpha$ over $[a,b]$. \hfill (2)
+            \item[$\iff$] $\underline{\int}_{a}^{b}f(x) \diffd \alpha = \overline{\int}_{a}^{b}f(x) \diffd \alpha$ \hfill (3)
+        \end{enumerate}
+    \end{corollary}
+
+    \begin{proof}
+        (1) $ \implies$ (2) by Lemma 6.1, 
+        (2) $ \implies$ (3) by Lemma 6.2, 
+        (3) $ \implies$ (1) by Lemma 6.3.
+    \end{proof}
+
+    \begin{remark}
+        (1) $\iff$ (2) called Integral Criterion.
+    \end{remark}
+
+    \section{Properties of Integral}
+
+    
+
+
 
 %----------------------------------------------------------------------------------------
 

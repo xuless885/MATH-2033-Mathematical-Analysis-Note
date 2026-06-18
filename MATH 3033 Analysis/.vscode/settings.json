@@ -1,0 +1,46 @@
+{
+    // ========================================
+    // MATH 3033 — LaTeX Workshop 项目设置
+    // ========================================
+
+    "latex-workshop.latex.recipes": [
+        {
+            "name": "xelatex ➔ biber ➔ xelatex ×2",
+            "tools": ["xelatex", "biber", "xelatex", "xelatex"]
+        },
+        {
+            "name": "xelatex (快速)",
+            "tools": ["xelatex"]
+        }
+    ],
+    "latex-workshop.latex.tools": [
+        {
+            "name": "xelatex",
+            "command": "xelatex",
+            "args": [
+                "-synctex=1",
+                "-interaction=nonstopmode",
+                "-file-line-error",
+                "-output-directory=%OUTDIR%",
+                "%DOC%"
+            ],
+            "env": {}
+        },
+        {
+            "name": "biber",
+            "command": "biber",
+            "args": ["%OUTDIR%/%DOCFILE%"]
+        }
+    ],
+    "latex-workshop.latex.outDir": "%DIR%/build",
+    "latex-workshop.latex.autoClean.run": "onBuilt",
+    "latex-workshop.latex.clean.fileTypes": [
+        "*.aux", "*.bbl", "*.blg", "*.idx", "*.ind", "*.lof",
+        "*.lot", "*.out", "*.toc", "*.acn", "*.acr", "*.alg",
+        "*.glg", "*.glo", "*.gls", "*.fls", "*.log", "*.fdb_latexmk",
+        "*.snm", "*.nav", "*.bcf", "*.run.xml", "*.synctex.gz",
+        "*.thm", "*.ptc"
+    ],
+
+    "commentTranslate.multiLineMerge": true
+}

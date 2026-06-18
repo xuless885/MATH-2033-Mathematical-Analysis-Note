@@ -1,0 +1,13 @@
+{
+    "recommendations": [
+        "james-yu.latex-workshop",
+        "tecosaur.latex-utilities",
+        "github.vscode-pull-request-github",
+        "github.copilot",
+        "intellsmi.comment-translate",
+        "streetsidesoftware.code-spell-checker",
+        "ban.spellright",
+        "torn4dom4n.latex-support"
+    ],
+    "unwantedRecommendations": []
+}

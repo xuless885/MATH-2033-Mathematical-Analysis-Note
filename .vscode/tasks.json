@@ -1,0 +1,50 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "LaTeX: 完整编译 (MATH 2033)",
+            "type": "shell",
+            "command": "cd \"MATH 2033 Analysis\" && xelatex -synctex=1 -interaction=nonstopmode -file-line-error -output-directory=build \"HKUST AnalysisI (UG).tex\" && biber build/\"HKUST AnalysisI (UG)\" && xelatex -synctex=1 -interaction=nonstopmode -file-line-error -output-directory=build \"HKUST AnalysisI (UG).tex\" && xelatex -synctex=1 -interaction=nonstopmode -file-line-error -output-directory=build \"HKUST AnalysisI (UG).tex\"",
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "problemMatcher": [],
+            "presentation": {
+                "reveal": "always",
+                "panel": "shared"
+            }
+        },
+        {
+            "label": "LaTeX: 完整编译 (MATH 3033)",
+            "type": "shell",
+            "command": "cd \"MATH 3033 Analysis\" && xelatex -synctex=1 -interaction=nonstopmode -file-line-error -output-directory=build \"HKUST AnalysisII (UG).tex\" && biber build/\"HKUST AnalysisII (UG)\" && xelatex -synctex=1 -interaction=nonstopmode -file-line-error -output-directory=build \"HKUST AnalysisII (UG).tex\" && xelatex -synctex=1 -interaction=nonstopmode -file-line-error -output-directory=build \"HKUST AnalysisII (UG).tex\"",
+            "group": "build",
+            "problemMatcher": [],
+            "presentation": {
+                "reveal": "always",
+                "panel": "shared"
+            }
+        },
+        {
+            "label": "LaTeX: 清理辅助文件 (MATH 2033)",
+            "type": "shell",
+            "command": "cd \"MATH 2033 Analysis\" && rm -f *.aux *.bbl *.blg *.idx *.ind *.lof *.lot *.out *.toc *.acn *.acr *.alg *.glg *.glo *.gls *.fls *.log *.fdb_latexmk *.snm *.nav *.bcf *.run.xml *.synctex.gz *.thm *.ptc && rm -rf build",
+            "problemMatcher": [],
+            "presentation": {
+                "reveal": "silent",
+                "panel": "shared"
+            }
+        },
+        {
+            "label": "LaTeX: 清理辅助文件 (MATH 3033)",
+            "type": "shell",
+            "command": "cd \"MATH 3033 Analysis\" && rm -f *.aux *.bbl *.blg *.idx *.ind *.lof *.lot *.out *.toc *.acn *.acr *.alg *.glg *.glo *.gls *.fls *.log *.fdb_latexmk *.snm *.nav *.bcf *.run.xml *.synctex.gz *.thm *.ptc && rm -rf build",
+            "problemMatcher": [],
+            "presentation": {
+                "reveal": "silent",
+                "panel": "shared"
+            }
+        }
+    ]
+}
