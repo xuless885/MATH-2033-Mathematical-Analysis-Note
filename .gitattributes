@@ -1,0 +1,26 @@
+# 统一换行符策略
+* text=auto
+
+# LaTeX 源文件使用 LF 换行（跨平台一致性）
+*.tex text eol=lf
+*.bib text eol=lf
+*.cls text eol=lf
+*.sty text eol=lf
+*.bst text eol=lf
+*.ist text eol=lf
+
+# Python 脚本
+*.py text eol=lf
+
+# JSON / 配置文件
+*.json text eol=lf
+*.md text eol=lf
+.gitattributes text eol=lf
+.gitignore text eol=lf
+
+# 二进制文件（防止 Git 误判）
+*.pdf binary
+*.jpg binary
+*.png binary
+*.gz binary
+*.zip binary
